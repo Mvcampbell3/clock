@@ -1,0 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clock{
+  display: grid;
+  grid-template-columns: 54px 54px 12px 54px 54px 12px 54px 54px;
+  width: fit-content;
+  margin: 2em auto;
+}
+
+.digit{
+  width: 54px;
+  height: 89px;
+  position: relative;
+}
+
+.bar{
+  height: 7px;
+  width: 30px;
+  border-radius: 10px;
+  background-color: red;
+  position: absolute;
+  opacity: 0;
+}
+
+.bar1{
+  opacity: 1;
+  transform: translateX(12px);
+}
+
+.bar2{
+  opacity: 1;
+  transform: rotateZ(90deg) translate(15px, -30px);
+}
+
+.bar3{
+  opacity: 1;
+  background-color: blue;
+  transform: translate(12px, 30px);
+}
