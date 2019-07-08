@@ -13,12 +13,12 @@
 
 .digit{
   width: 54px;
-  height: 89px;
+  height: 67px;
   position: relative;
 }
 
 .bar{
-  height: 7px;
+  height: 5px;
   width: 30px;
   border-radius: 10px;
   background-color: red;
@@ -38,6 +38,45 @@
 
 .bar3{
   opacity: 1;
-  background-color: blue;
   transform: translate(12px, 30px);
+}
+
+.bar4{
+  opacity: 1;
+  transform: rotateZ(90deg) translate(15px, 6px);
+}
+
+.bar5{
+  opacity: 1;
+  transform: rotateZ(90deg) translate(46px, -30px);
+}
+
+.bar6{
+  opacity: 1;
+  transform: translate(12px, 61px)
+}
+
+.bar7{
+  opacity: 1;
+  transform: rotate(90deg) translate(46px, 6px)
+}
+
+.seperator{
+  display: flex;
+  width: 12px;
+  height: 67px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle{
+  height: 8px;
+  width: 8px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.circle:nth-child(1){
+  margin-bottom: 5px;
 }
