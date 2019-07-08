@@ -84,5 +84,3 @@ function whichDigit(number, digit) {
 
 getTime();
 const timer = setInterval(getTime, 1000)
-
-whichDigit("9", digit1)
