@@ -23,41 +23,33 @@
   border-radius: 10px;
   background-color: red;
   position: absolute;
-  opacity: 0;
 }
 
 .bar1{
-  opacity: 1;
   transform: translateX(12px);
 }
 
 .bar2{
-  opacity: 1;
   transform: rotateZ(90deg) translate(15px, -30px);
 }
 
 .bar3{
-  opacity: 1;
   transform: translate(12px, 30px);
 }
 
 .bar4{
-  opacity: 1;
   transform: rotateZ(90deg) translate(15px, 6px);
 }
 
 .bar5{
-  opacity: 1;
   transform: rotateZ(90deg) translate(46px, -30px);
 }
 
 .bar6{
-  opacity: 1;
   transform: translate(12px, 61px)
 }
 
 .bar7{
-  opacity: 1;
   transform: rotate(90deg) translate(46px, 6px)
 }
 
@@ -79,4 +71,8 @@
 
 .circle:nth-child(1){
   margin-bottom: 5px;
+}
+
+.green{
+  background-color: green;
 }
