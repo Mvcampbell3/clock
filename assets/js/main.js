@@ -11,6 +11,8 @@ function getTime() {
   let minutes = newTime.getMinutes();
   let seconds = newTime.getSeconds();
 
+  setCircles(hours, minutes, seconds)
+
   let hourDisp = hours % 12;
   // let amPM = hours >= 12 ? "PM" : "AM";
 
@@ -21,9 +23,13 @@ function getTime() {
   let hourArr = hourStr.split("");
   if (hourArr[0] === "0") {
     digit1.forEach(one => one.style.display = "none");
+  } else if (hourArr[0] === "0" && hourArr[1] === "0"){
+    whichDigit("1", digit1);
+    whichDigit("2", digit2);
   } else {
     whichDigit(hourArr[0], digit1);
   }
+  
   whichDigit(hourArr[1], digit2);
   let minArray = minStr.split("");
   whichDigit(minArray[0], digit3);
@@ -80,6 +86,22 @@ function whichDigit(number, digit) {
     default:
       console.log("switch not working as expected");
   }
+}
+
+function setCircles(hours, minutes, seconds) {
+  const hourCircle = document.getElementById("hourCircle");
+  const minCircle = document.getElementById("minCircle");
+  const secCircle = document.getElementById("secCircle");
+
+  const hourSize = (hours/24);
+  const minSize = (minutes/60);
+  const secSize = (seconds/60);
+
+  console.log(secSize)
+  // set the sizes
+  hourCircle.style.transform = `scale(${hourSize})`;
+  minCircle.style.transform = `scale(${minSize})`;
+  secCircle.style.transform = `scale(${secSize})`;
 }
 
 getTime();
